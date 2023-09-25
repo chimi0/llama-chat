@@ -18,7 +18,7 @@ npm install
 Add your [Replicate API token](https://replicate.com/account#token) to `.env.local`:
 
 ```
-REPLICATE_API_TOKEN=<your-token-here>
+REPLICATE_API_TOKEN=r8_ARlCIdGnLW5ER020CHmIHlLTIp6fxVH1SJ3Po
 ```
 
 Run the development server:
