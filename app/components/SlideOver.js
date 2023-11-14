@@ -48,7 +48,7 @@ export default function SlideOver({
                       <div className="bg-gray-700 px-4 py-6 sm:px-6">
                         <div className="flex items-center justify-between">
                           <Dialog.Title className="text-base font-semibold leading-6 text-white">
-                            🦙 Chat with a Llama
+                            😍 Discute avec Empathia 😍
                           </Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
@@ -56,7 +56,7 @@ export default function SlideOver({
                               className="rounded-md bg-gray-700 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                               onClick={() => setOpen(false)}
                             >
-                              <span className="sr-only">Close panel</span>
+                              <span className="sr-only">Fermer</span>
                               <XMarkIcon
                                 className="h-6 w-6"
                                 aria-hidden="true"
@@ -66,7 +66,7 @@ export default function SlideOver({
                         </div>
                         <div className="mt-1">
                           <p className="text-sm text-gray-300">
-                            A project from Replicate.
+                            Projet tiré de Llama2.
                           </p>
                         </div>
                       </div>
@@ -110,42 +110,40 @@ export default function SlideOver({
                                       <Listbox.Options className="absolute mt-1 max-h-60 w-full shadow-md overflow-auto border-gray-700 rounded-md bg-white py-1 text-base ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                                         {versions
                                           ? versions.map(
-                                              (version, versionIdx) => (
-                                                <Listbox.Option
-                                                  key={versionIdx}
-                                                  className={({ active }) =>
-                                                    `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                                                      active
-                                                        ? "bg-gray-100 text-gray-900"
-                                                        : "text-gray-900"
-                                                    }`
-                                                  }
-                                                  value={version}
-                                                >
-                                                  {({ selected }) => (
-                                                    <>
-                                                      <span
-                                                        className={`block truncate ${
-                                                          selected
-                                                            ? "font-medium"
-                                                            : "font-normal"
+                                            (version, versionIdx) => (
+                                              <Listbox.Option
+                                                key={versionIdx}
+                                                className={({ active }) =>
+                                                  `relative cursor-default select-none py-2 pl-10 pr-4 ${active
+                                                    ? "bg-gray-100 text-gray-900"
+                                                    : "text-gray-900"
+                                                  }`
+                                                }
+                                                value={version}
+                                              >
+                                                {({ selected }) => (
+                                                  <>
+                                                    <span
+                                                      className={`block truncate ${selected
+                                                        ? "font-medium"
+                                                        : "font-normal"
                                                         }`}
-                                                      >
-                                                        {version.name}
+                                                    >
+                                                      {version.name}
+                                                    </span>
+                                                    {selected ? (
+                                                      <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-600">
+                                                        <CheckIcon
+                                                          className="h-5 w-5"
+                                                          aria-hidden="true"
+                                                        />
                                                       </span>
-                                                      {selected ? (
-                                                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-600">
-                                                          <CheckIcon
-                                                            className="h-5 w-5"
-                                                            aria-hidden="true"
-                                                          />
-                                                        </span>
-                                                      ) : null}
-                                                    </>
-                                                  )}
-                                                </Listbox.Option>
-                                              )
+                                                    ) : null}
+                                                  </>
+                                                )}
+                                              </Listbox.Option>
                                             )
+                                          )
                                           : null}
                                       </Listbox.Options>
                                     </Transition>
@@ -175,7 +173,7 @@ export default function SlideOver({
                                   name="systemPrompt"
                                   rows={4}
                                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-                                  value={systemPrompt}
+                                  value="You are a french-talking emotional support for patients."
                                   onChange={(e) =>
                                     setSystemPrompt(e.target.value)
                                   }
