@@ -2,6 +2,9 @@ export default function EmptyState({ setOpen, setPrompt }) {
   return (
     <div className="mt-12 sm:mt-24 space-y-6 text-gray-400 text-base mx-8 sm:mx-4 sm:text-2xl leading-12">
       <p>
+        Bonjour, je suis 😍 EmpathIA 😍.
+      </p>
+      {/* <p>
         {" "}
         Customize Llama&apos;s personality by clicking the{" "}
         <button
@@ -66,8 +69,8 @@ export default function EmptyState({ setOpen, setPrompt }) {
         >
           name your pets.
         </button>{" "}
-      </p>
-      <p>Send me a message.</p>
+        </p> */}
+      <p>Envoie moi un message ! ❤️</p>
     </div>
   );
 }

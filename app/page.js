@@ -40,7 +40,7 @@ export default function HomePage() {
   //   Llama params
   const [size, setSize] = useState(VERSIONS[2]); // default to 70B
   const [systemPrompt, setSystemPrompt] = useState(
-    "You are a helpful assistant."
+    "You are a french-talking emotional support for patients."
   );
   const [temp, setTemp] = useState(0.75);
   const [topP, setTopP] = useState(0.9);
@@ -140,12 +140,12 @@ export default function HomePage() {
       <nav className="grid grid-cols-2 pt-3 pl-6 pr-3 sm:grid-cols-3 sm:pl-0">
         <div className="hidden sm:inline-block"></div>
         <div className="font-semibold text-gray-500 sm:text-center">
-          🦙 <span className="hidden sm:inline-block">Chat with</span>{" "}
+          😍 <span className="hidden sm:inline-block">Discute avec</span>{" "}
           <button
             className="py-2 font-semibold text-gray-500 hover:underline"
             onClick={() => setOpen(true)}
           >
-            Llama 2 {size.shortened}
+            EmpathIA {size.shortened}
           </button>
         </div>
         <div className="flex justify-end">
@@ -157,7 +157,7 @@ export default function HomePage() {
               className="w-5 h-5 text-gray-500 sm:mr-2 group-hover:text-gray-900"
               aria-hidden="true"
             />{" "}
-            <span className="hidden sm:inline">Clone on GitHub</span>
+            <span className="hidden sm:inline">Clone sur GitHub</span>
           </a>
           <button
             type="button"
@@ -168,7 +168,7 @@ export default function HomePage() {
               className="w-5 h-5 text-gray-500 sm:mr-2 group-hover:text-gray-900"
               aria-hidden="true"
             />{" "}
-            <span className="hidden sm:inline">Settings</span>
+            <span className="hidden sm:inline">Paramètres</span>
           </button>
         </div>
       </nav>
